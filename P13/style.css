@@ -1,0 +1,66 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Flexbox for header and navigation */
+header {
+    background-color: goldenrod;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Main content */
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+/* CSS Grid for projects */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.project {
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
