@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: goldenrod;
+    color: black;
+    text-align: center;
+    padding: 25px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.project {
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.project h2 {
+    color: goldenrod;
+}
+
+.project:nth-child(1) {
+    grid-column: span 2;
+}
+
+.project:nth-child(4) {
+    grid-row: span 2;
+}
+
+@media (max-width: 600px) {
+    .project:nth-child(1),
+    .project:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
